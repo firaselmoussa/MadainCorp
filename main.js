@@ -24,12 +24,13 @@ let userCards = [];
             userCard.classList.add('user-card');
             userCard.classList.add('user-card');
             userCard.setAttribute('category', category);
-            userCard.getAttribute('category')
+            userCard.getAttribute('category');
+            userCard.setAttribute('categoryAtt', category);
 
             let userAvatar = document.createElement('div');
             userAvatar.classList.add('user-avatar');
             userAvatar.innerText = user.fname[0]+user.lname[0];
-            userAvatar.setAttribute('categoryAtt', category);
+            // userAvatar.setAttribute('categoryAtt', category);
             
             let userName = `${user.fname} ${user.lname}`;
 
