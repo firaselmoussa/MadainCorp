@@ -16,12 +16,11 @@ body{
     margin-left: 20vw;
     margin-top: 10vh;
     width: 60vw;
-    height: 80vh;
+    height: fit-content;
+    max-height: 80vh;
     overflow-y: scroll;
     display: flex;
     flex-flow: wrap row;
-    justify-content: center;
-    align-items: center;
     border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
