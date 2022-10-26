@@ -1,6 +1,7 @@
 const path = 'http://www.filltext.com/?rows=9&fname={firstName}&lname={lastName}&pretty=true';
 
 const container = document.getElementById('container');
+const all = document.getElementById('all');
 const category_1 = document.getElementById('category_1');
 const category_2 = document.getElementById('category_2');
 
@@ -41,6 +42,14 @@ let userCards = [];
         };
     };
 
+
+all.addEventListener('click', ()=>{
+    userCards.forEach(element => {
+        console.log(element.getAttribute('category'))
+        element.style.display = 'flex';
+    });
+    
+});
 
 category_1.addEventListener('click', ()=>{
     userCards.forEach(element => {
