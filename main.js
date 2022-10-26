@@ -10,8 +10,16 @@ const container = document.getElementById('container');
 
     function renderUsers(usersdata){
         for(user of usersdata){
+
+            let category;
+            let x = Math.floor(Math.random()*10);
+
+            x > 5? category = 1: category = 2;
+
             let userCard = document.createElement('div');
             userCard.classList.add('user-card');
+            userCard.classList.add('user-card');
+            userCard.setAttribute('category', category);
 
             let userAvatar = document.createElement('div');
             userAvatar.classList.add('user-avatar');
@@ -21,6 +29,6 @@ const container = document.getElementById('container');
 
             userCard.append(userAvatar, userName);
             container.append(userCard);
-console.log(userCard)
-        }
-    }
+
+        };
+    };
