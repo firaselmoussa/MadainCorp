@@ -1,6 +1,10 @@
 const path = 'http://www.filltext.com/?rows=9&fname={firstName}&lname={lastName}&pretty=true';
 
 const container = document.getElementById('container');
+const category_1 = document.getElementById('category_1');
+const category_2 = document.getElementById('category_2');
+
+let userCards = [];
 
     fetch(path).then((data)=>{
     return data.json()
@@ -32,5 +36,23 @@ const container = document.getElementById('container');
             userCard.append(userAvatar, userName);
             container.append(userCard);
 
+            userCards.push(userCard);
         };
     };
+
+
+category_1.addEventListener('click', ()=>{
+    userCards.forEach(element => {
+        console.log(element.getAttribute('category'))
+        element.getAttribute('category') == 1? element.style.display = 'flex' : element.style.display = 'none';
+    });
+    
+});
+
+category_2.addEventListener('click', ()=>{
+    userCards.forEach(element => {
+        console.log(element.getAttribute('category'))
+        element.getAttribute('category') == 2? element.style.display = 'flex' : element.style.display = 'none';
+    });
+    
+});
