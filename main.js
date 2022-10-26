@@ -20,10 +20,12 @@ const container = document.getElementById('container');
             userCard.classList.add('user-card');
             userCard.classList.add('user-card');
             userCard.setAttribute('category', category);
+            userCard.getAttribute('category')
 
             let userAvatar = document.createElement('div');
             userAvatar.classList.add('user-avatar');
             userAvatar.innerText = user.fname[0]+user.lname[0];
+            userAvatar.setAttribute('categoryAtt', category);
             
             let userName = `${user.fname} ${user.lname}`;
 

@@ -43,3 +43,15 @@ body{
     font-weight: bolder;
     margin: 0 20px;
 }
+
+.user-avatar::after {
+    content: attr(categoryAtt);
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 1px 8px;
+    background: black;
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    margin: 12px 0;
+}
