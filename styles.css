@@ -24,6 +24,19 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
+#container::-webkit-scrollbar {
+    width: 6px;
+}
+
+#container::-webkit-scrollbar-track {
+    background: white;
+}
+
+#container::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 20px;
+}
+
 .category-header {
     width: 100%;
     height: fit-content;
